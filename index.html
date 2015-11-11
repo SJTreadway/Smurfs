@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="smurfApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Smurfville</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-controller="smurfCtrl">
+
+    <h1>Smurf Station</h1>
+
+    <div>
+      <input ng-model="newSmurf" type="text" placeholder="Add new smurf here">
+      <button ng-click="addSmurf(newSmurf)">Confirm</button>
+
+    <div>
+      <h2>List of Smurfs</h2>
+        <ul>
+          <li ng-repeat="smurf in smurfs" ng-bind="smurf.name"></li>
+        </ul>
+
+
+  </body>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/service.js"></script>
+</html>
