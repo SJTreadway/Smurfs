@@ -1,11 +1,12 @@
 (function() {
 angular.module('smurfApp')
-       .controller('smurfCtrl', function($scope, smurfService) {
+       .controller('homeCtrl', function($scope, smurfService) {
           $scope.getData = function() {
             smurfService.getSmurfs()
             .then(function(res) {
-              console.log(res)
-              $scope.smurfs = res.data.data.memes;
+              // console.log(res)
+              $scope.smurfs = res.data;
+              $scope.smurfId = res.data.id;
             });
             }
             $scope.getData();
@@ -18,9 +19,9 @@ angular.module('smurfApp')
               })
             }
 
-            setInterval(function() {
-              $scope.getData();
-            }, 1000);
+            // setInterval(function() {
+            //   $scope.getData();
+            // }, 1000);
 
           })
 

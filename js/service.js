@@ -5,7 +5,7 @@ angular.module('smurfApp')
           this.getSmurfs = function() {
             return $http({
               method: 'GET',
-              url: 'https://api.imgflip.com/get_memes'
+              url: 'http://smurfs.devmounta.in/smurfs/'
             });
           };
 
@@ -16,8 +16,6 @@ angular.module('smurfApp')
               data: {name: newSmurf}
             })
           }
-
-
        });
 
 

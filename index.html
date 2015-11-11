@@ -2,23 +2,19 @@
 <html ng-app="smurfApp">
   <head>
     <meta charset="utf-8">
-    <title>Smurfville</title>
+    <title>Smurf Station</title>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body ng-controller="smurfCtrl">
+  <body ng-controller="homeCtrl">
 
     <h1>Smurf Station</h1>
 
-    <div>
-      <input ng-model="newSmurf" type="text" placeholder="Add new smurf here">
-      <button ng-click="addSmurf(newSmurf)">Confirm</button>
+    <div id="img">
+      <img src="smurf.jpg">
+    </div>
 
-    <div>
-      <h2>List of Smurfs</h2>
-        <ul>
-          <li ng-repeat="smurf in smurfs" ng-bind="smurf.name"></li>
-        </ul>
-
+    <ui-view></ui-view>
 
   </body>
 
